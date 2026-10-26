@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b32">
+<title>FlowWise — Make every rand count</title>
+<style>
+:root{--green:#123b32;--green2:#1d5b4b;--mint:#e8f3ed;--cream:#f7f6f0;--gold:#f0bd54;--ink:#18231f;--muted:#65736d;--line:#e1e7e2;--red:#b84040;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;min-height:100vh}.topbar{background:var(--green);color:white;padding:22px 20px 18px;border-radius:0 0 24px 24px}.brandrow{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:var(--gold);display:grid;place-items:center;color:var(--green);font-size:24px;font-weight:900}.brand{font-size:22px;font-weight:850;letter-spacing:-.5px}.tagline{font-size:12px;color:#d5e7dd;margin-top:2px}.topnote{margin:18px 0 0;font-size:13px;color:#e2eee8}.nav{display:flex;gap:8px;padding:14px 16px;overflow-x:auto;position:sticky;top:0;background:var(--cream);z-index:5}.nav button{border:1px solid var(--line);border-radius:12px;background:white;padding:10px 14px;white-space:nowrap;color:var(--muted);font-weight:700;font-size:13px}.nav button.active{background:var(--green);border-color:var(--green);color:white}.content{padding:8px 16px 38px}.pagehead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:8px 0 18px}.eyebrow{color:var(--green2);font-weight:800;text-transform:uppercase;letter-spacing:1.2px;font-size:10px}.pagehead h1{font-size:27px;letter-spacing:-.8px;margin:4px 0}.pagehead p{margin:5px 0;color:var(--muted);font-size:13px;line-height:1.5}.badge{border-radius:99px;background:var(--mint);color:var(--green2);padding:7px 10px;font-size:11px;font-weight:800;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:17px;box-shadow:0 4px 16px #183a2b08;min-width:0}.metric-label{font-size:12px;color:var(--muted);font-weight:650}.metric{font-size:25px;letter-spacing:-.8px;font-weight:850;margin:9px 0 5px;overflow-wrap:anywhere}.metric-sub{font-size:11px;color:var(--muted)}.green{color:var(--green2)}.red{color:var(--red)}.sectiontitle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 12px}.sectiontitle h2{font-size:16px;margin:0;letter-spacing:-.3px}.textbtn{background:none;border:0;color:var(--green2);font-weight:800;font-size:12px}.quickactions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.action{border:0;border-radius:16px;padding:16px;text-align:left;background:var(--green);color:white;min-height:95px}.action.secondary{background:var(--gold);color:var(--green)}.action strong{display:block;font-size:15px;margin-bottom:6px}.action span{font-size:12px;opacity:.85}.hint{background:#fff8e6;border:1px solid #f1dfb1;padding:13px 14px;border-radius:14px;color:#705622;font-size:12px;line-height:1.5;margin-top:16px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}.panel h2{font-size:16px;margin:0 0 5px}.panel>p{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750;color:#46554e}.field input,.field select{width:100%;border:1px solid #d7e0d9;border-radius:11px;background:white;padding:12px;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--green2);box-shadow:0 0 0 3px #1d5b4b15}.primary{border:0;border-radius:12px;padding:12px 16px;background:var(--green);color:white;font-weight:800}.secondarybtn{border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:white;color:var(--green);font-weight:800}.formactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:470px}th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);padding:10px;border-bottom:1px solid var(--line)}td{font-size:12px;padding:12px 10px;border-bottom:1px solid #edf0ed}tr:last-child td{border-bottom:0}.pill{font-size:10px;font-weight:800;padding:5px 8px;border-radius:99px;display:inline-block}.pill.in{background:#e2f4e8;color:#216b3d}.pill.out{background:#fce8e6;color:#a63232}.deletebtn{border:0;background:transparent;color:var(--red);font-size:11px;font-weight:800}.empty{padding:26px;text-align:center;color:var(--muted);font-size:13px}.insight{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.insight:last-child{border-bottom:0}.insighticon{width:34px;height:34px;border-radius:11px;background:var(--mint);display:grid;place-items:center;flex-shrink:0}.insight strong{font-size:13px;display:block;margin:1px 0 4px}.insight p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.plannerresult{padding:17px;border-radius:15px;background:var(--mint);margin-top:14px}.plannerresult.negative{background:#fcebea}.resultlabel{font-size:12px;color:var(--muted)}.resultnumber{font-size:27px;font-weight:900;letter-spacing:-.7px;margin:5px 0}.footnote{font-size:11px;color:var(--muted);line-height:1.5;margin-top:14px}.footer{padding:18px;text-align:center;font-size:11px;color:var(--muted)}.hidden{display:none!important}.smallstat{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:12px}.smallstat:last-child{border:0}.smallstat span{color:var(--muted)}.warning{font-size:12px;color:#7b5b1b;background:#fff7e4;border-radius:12px;padding:12px;line-height:1.5}
+@media(min-width:760px){.topbar{padding:26px 30px 22px;margin-top:18px;border-radius:24px}.nav{padding:18px 0}.content{padding:8px 0 44px}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.mainlayout{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.mainlayout .sectiontitle{margin-top:4px}.panel{padding:22px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr 1fr}.grid .card:last-child{grid-column:1/-1}.metric{font-size:22px}.pagehead h1{font-size:24px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.topbar{padding:20px 16px 17px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brandrow"><div class="logo">F</div><div><div class="brand">FlowWise</div><div class="tagline">Make every rand count.</div></div></div>
+  <p class="topnote">A money companion for business owners whose income can change from week to week.</p>
+</header>
+<nav class="nav" aria-label="Main navigation">
+  <button class="active" data-page="home">Overview</button>
+  <button data-page="transactions">Money In & Out</button>
+  <button data-page="planner">Survival Planner</button>
+  <button data-page="insights">Money Insights</button>
+</nav>
+<main class="content">
+<section id="page-home">
+  <div class="pagehead"><div><div class="eyebrow">Your business at a glance</div><h1>Money overview</h1><p>See what you've recorded and plan your next move.</p></div><span class="badge">Prototype</span></div>
+  <div class="grid">
+    <div class="card"><div class="metric-label">Money in</div><div class="metric green" id="totalIn">R0.00</div><div class="metric-sub">All recorded income</div></div>
+    <div class="card"><div class="metric-label">Money out</div><div class="metric red" id="totalOut">R0.00</div><div class="metric-sub">All recorded expenses</div></div>
+    <div class="card"><div class="metric-label">Remaining balance</div><div class="metric" id="balance">R0.00</div><div class="metric-sub">Recorded income minus expenses</div></div>
+  </div>
+  <div class="sectiontitle"><h2>Make a money move</h2></div>
+  <div class="quickactions"><button class="action" id="quickIncome"><strong>＋ Record money in</strong><span>Add a sale, payment or other income.</span></button><button class="action secondary" id="quickExpense"><strong>− Record money out</strong><span>Track stock, transport and other costs.</span></button></div>
+  <div class="mainlayout">
+    <div><div class="sectiontitle"><h2>Recent activity</h2><button class="textbtn" data-goto="transactions">View all</button></div><div class="panel" id="recentList"></div></div>
+    <div><div class="sectiontitle"><h2>Quick planning check</h2><button class="textbtn" data-goto="planner">Open planner →</button></div><div class="panel"><h2>Will your money cover what's next?</h2><p>Compare money available now with upcoming expenses. Expected income is kept separate until you actually receive it.</p><button class="primary" data-goto="planner">Plan upcoming expenses</button><div class="footnote">Your remaining balance is based only on the transactions you've entered. It may not represent your full bank balance or business profit.</div></div></div>
+  </div>
+  <div class="hint"><strong>Privacy note:</strong> This prototype saves entries in this browser on this device. Other people with access to the same browser profile may be able to see them. Use fictional data while testing; do not enter banking PINs, passwords or sensitive financial information.</div>
+</section>
+
+<section id="page-transactions" class="hidden">
+  <div class="pagehead"><div><div class="eyebrow">Track the movement</div><h1>Money In & Out</h1><p>Record income and business spending in one place.</p></div></div>
+  <div class="panel">
+    <h2 id="formTitle">Add a transaction</h2><p>Enter a realistic example or fictional transaction to test the prototype.</p>
+    <form id="transactionForm">
+      <div class="formgrid">
+        <div class="field"><label for="type">Transaction type</label><select id="type"><option value="in">Money in (income)</option><option value="out">Money out (expense)</option></select></div>
+        <div class="field"><label for="amount">Amount (R)</label><input id="amount" type="number" min="0.01" step="0.01" placeholder="e.g. 250.00" required></div>
+        <div class="field"><label for="description">Description</label><input id="description" maxlength="80" placeholder="e.g. Weekend sales" required></div>
+        <div class="field"><label for="category">Category</label><select id="category"><option>Sales</option><option>Service income</option><option>Other income</option><option>Stock / supplies</option><option>Transport</option><option>Rent / utilities</option><option>Marketing</option><option>Phone / data</option><option>Food / daily needs</option><option>Other expense</option></select></div>
+        <div class="field full"><label for="date">Date</label><input id="date" type="date" required></div>
+      </div>
+      <div class="formactions"><button class="primary" type="submit" id="saveBtn">Save transaction</button><button class="secondarybtn hidden" type="button" id="cancelEdit">Cancel edit</button></div>
+    </form>
+  </div>
+  <div class="panel"><div class="sectiontitle" style="margin-top:0"><h2>Transaction history</h2><button class="textbtn" id="exportCsv">Export CSV</button></div><div id="transactionList" class="tablewrap"></div><p class="footnote">Export creates a copy of the transaction list on your device. Only export fictional test data during the hackathon prototype stage.</p></div>
+</section>
+
+<section id="page-planner" class="hidden">
+  <div class="pagehead"><div><div class="eyebrow">Prepare for uncertainty</div><h1>Money Survival Planner</h1><p>Test whether your available money can cover upcoming expenses—even if expected income is delayed.</p></div></div>
+  <div class="panel"><h2>Plan a scenario</h2><p>Use money you actually have now in the first field. Add expected income separately; it is not guaranteed money.</p>
+    <form id="plannerForm"><div class="formgrid">
+      <div class="field"><label for="available">Money available now (R)</label><input id="available" type="number" min="0" step=".01" value="1000" required></div>
+      <div class="field"><label for="upcoming">Upcoming expenses (R)</label><input id="upcoming" type="number" min="0" step=".01" value="750" required></div>
+      <div class="field"><label for="expected">Expected income (R)</label><input id="expected" type="number" min="0" step=".01" value="500" required></div>
+      <div class="field"><label for="scenario">Scenario to test</label><select id="scenario"><option value="arrives">Expected income arrives on time</option><option value="half">Only half the expected income arrives</option><option value="late">Expected income is delayed / does not arrive</option></select></div>
+    </div><div class="formactions"><button class="primary" type="submit">Calculate my scenario</button><button class="secondarybtn" type="button" id="resetPlanner">Reset example</button></div></form>
+    <div id="plannerResult" class="plannerresult"><div class="resultlabel">Money left after planned expenses</div><div class="resultnumber">R750.00</div><div>With the example values, you have enough money for the expenses before counting expected income.</div></div>
+    <p class="footnote">This is a planning estimate, not financial advice. It assumes the amounts you enter are accurate and does not account for unlisted expenses.</p>
+  </div>
+  <div class="panel"><h2>How to read the result</h2><div class="smallstat"><span>Money available now</span><strong>Already in your hands or account</strong></div><div class="smallstat"><span>Expected income</span><strong>Not guaranteed until received</strong></div><div class="smallstat"><span>Shortfall</span><strong>Amount you may still need to cover</strong></div></div>
+</section>
+
+<section id="page-insights" class="hidden">
+  <div class="pagehead"><div><div class="eyebrow">Small patterns, smarter choices</div><h1>Money Insights</h1><p>Simple observations based on the transactions you record.</p></div></div>
+  <div class="panel"><h2>Your current insights</h2><p>These are basic rules-based observations, not predictions.</p><div id="insightList"></div></div>
+  <div class="panel"><h2>Build a useful habit</h2><p>Try recording every sale and expense for a week. Better records can make planning easier, but the app only knows what you enter.</p><button class="primary" data-goto="transactions">Record a transaction</button></div>
+</section>
+</main>
+<footer class="footer">FlowWise · Make every rand count · Hackathon prototype · Use fictional data for testing</footer>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const money = n => new Intl.NumberFormat('en-ZA',{style:'currency',currency:'ZAR'}).format(Number(n)||0);
+const today = new Date();
+const localDate = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+$('date').value = localDate;
+let transactions = [];
+try { transactions = JSON.parse(localStorage.getItem('flowwise_transactions') || '[]'); if(!Array.isArray(transactions)) transactions=[]; } catch(e){transactions=[];}
+let editingId = null;
+function save(){ try{localStorage.setItem('flowwise_transactions',JSON.stringify(transactions));}catch(e){alert('Could not save in this browser. Please check browser storage settings.');} render(); }
+function sums(){return transactions.reduce((s,t)=>{if(t.type==='in')s.in+=t.amount;else s.out+=t.amount;return s;},{in:0,out:0});}
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){
+ const s=sums(), bal=s.in-s.out;
+ $('totalIn').textContent=money(s.in);$('totalOut').textContent=money(s.out);$('balance').textContent=money(bal);$('balance').className='metric '+(bal<0?'red':'green');
+ const sorted=[...transactions].sort((a,b)=>b.date.localeCompare(a.date)||b.created-b.created);
+ $('recentList').innerHTML=sorted.length?sorted.slice(0,5).map(t=>`<div class="smallstat"><div><strong>${safe(t.description)}</strong><br><span>${safe(t.date)} · ${safe(t.category)}</span></div><strong class="${t.type==='in'?'green':'red'}">${t.type==='in'?'+':'−'}${money(t.amount)}</strong></div>`).join(''):'<div class="empty">No transactions yet.<br>Record your first money-in or money-out entry.</div>';
+ $('transactionList').innerHTML=sorted.length?`<table><thead><tr><th>Date</th><th>Description</th><th>Type</th><th>Amount</th><th></th></tr></thead><tbody>${sorted.map(t=>`<tr><td>${safe(t.date)}</td><td><strong>${safe(t.description)}</strong><br><span style="color:#65736d">${safe(t.category)}</span></td><td><span class="pill ${t.type}">${t.type==='in'?'Money in':'Money out'}</span></td><td class="${t.type==='in'?'green':'red'}"><strong>${money(t.amount)}</strong></td><td><button class="deletebtn" data-edit="${t.id}">Edit</button> · <button class="deletebtn" data-delete="${t.id}">Delete</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">Your transaction history will appear here.</div>';
+ document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('Delete this transaction?')){transactions=transactions.filter(t=>t.id!==b.dataset.delete);if(editingId===b.dataset.delete)resetTransactionForm();save();}});
+ document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editTransaction(b.dataset.edit));
+ renderInsights();
+}
+function resetTransactionForm(){editingId=null;$('transactionForm').reset();$('date').value=localDate;$('formTitle').textContent='Add a transaction';$('saveBtn').textContent='Save transaction';$('cancelEdit').classList.add('hidden');}
+function editTransaction(id){const t=transactions.find(x=>x.id===id);if(!t)return;editingId=id;$('type').value=t.type;$('amount').value=t.amount;$('description').value=t.description;$('category').value=t.category;$('date').value=t.date;$('formTitle').textContent='Edit transaction';$('saveBtn').textContent='Update transaction';$('cancelEdit').classList.remove('hidden');showPage('transactions');window.scrollTo({top:0,behavior:'smooth'});}
+$('transactionForm').addEventListener('submit',e=>{e.preventDefault();const amount=Number($('amount').value),description=$('description').value.trim();if(!Number.isFinite(amount)||amount<=0){alert('Enter an amount greater than R0.');return;}if(!description){alert('Add a short description.');return;}const item={id:editingId||`${Date.now()}-${Math.random().toString(16).slice(2)}`,type:$('type').value,amount:Math.round(amount*100)/100,description,category:$('category').value,date:$('date').value,created:Date.now()};if(editingId)transactions=transactions.map(t=>t.id===editingId?item:t);else transactions.push(item);resetTransactionForm();save();});
+$('cancelEdit').onclick=resetTransactionForm;
+$('type').addEventListener('change',()=>{const opts=$('category').options;const expense=$('type').value==='out';$('category').value=expense?'Stock / supplies':'Sales';});
+$('exportCsv').onclick=()=>{if(!transactions.length){alert('There are no transactions to export yet.');return;}const rows=[['Date','Type','Description','Category','Amount'],...transactions.map(t=>[t.date,t.type,t.description,t.category,t.amount])];const csv=rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));const a=document.createElement('a');a.href=url;a.download='flowwise-transactions.csv';a.click();URL.revokeObjectURL(url);};
+function calculatePlanner(){const available=Number($('available').value),upcoming=Number($('upcoming').value),expected=Number($('expected').value),scenario=$('scenario').value;if([available,upcoming,expected].some(n=>!Number.isFinite(n)||n<0)){alert('Enter valid amounts of R0 or more.');return;}const included=scenario==='arrives'?expected:scenario==='half'?expected/2:0;const after=available+included-upcoming;const labels={arrives:'Expected income arrives on time',half:'Only half of expected income arrives',late:'Expected income is delayed / does not arrive'};const result=$('plannerResult');result.classList.toggle('negative',after<0);let detail=after>=0?`You may have ${money(after)} left after the listed expenses in this scenario.`:`You may have a shortfall of ${money(Math.abs(after))}. Consider prioritising essential expenses or finding a safe way to cover the gap.`;result.innerHTML=`<div class="resultlabel">Money left after planned expenses · ${safe(labels[scenario])}</div><div class="resultnumber">${money(after)}</div><div>${detail}</div><div class="footnote">Calculation: ${money(available)} available + ${money(included)} expected in this scenario − ${money(upcoming)} upcoming expenses.</div>`;}
+$('plannerForm').addEventListener('submit',e=>{e.preventDefault();calculatePlanner();});
+$('resetPlanner').onclick=()=>{$('available').value=1000;$('upcoming').value=750;$('expected').value=500;$('scenario').value='arrives';calculatePlanner();};
+function renderInsights(){const s=sums(),bal=s.in-s.out;const items=[];if(!transactions.length){items.push(['📝','Start with one transaction','Record a sale or expense to begin generating insights.']);items.push(['🧭','Plan before spending','Use the Money Survival Planner to compare money available now with upcoming expenses.']);}else{items.push(['📊','Recorded balance',`Your recorded income is ${money(s.in)} and recorded expenses are ${money(s.out)}. The difference is ${money(bal)}; this is not necessarily business profit.`]);if(s.out>s.in)items.push(['⚠️','Expenses exceed recorded income','Your recorded expenses are higher than recorded income. Check whether all income has been entered and review upcoming costs.']);else items.push(['🌱','Keep your records up to date','Continue recording both income and expenses so your overview stays useful.']);const cats={};transactions.filter(t=>t.type==='out').forEach(t=>cats[t.category]=(cats[t.category]||0)+t.amount);const biggest=Object.entries(cats).sort((a,b)=>b[1]-a[1])[0];if(biggest)items.push(['🧾','Largest recorded expense category',`${biggest[0]} totals ${money(biggest[1])} in the transactions you entered. This may help you review spending.`]);items.push(['🛟','Stress-test expected income','Open the Money Survival Planner and test what happens if expected income is delayed.']);}$('insightList').innerHTML=items.map(i=>`<div class="insight"><div class="insighticon">${i[0]}</div><div><strong>${safe(i[1])}</strong><p>${safe(i[2])}</p></div></div>`).join('');}
+function showPage(page){document.querySelectorAll('main section[id^="page-"]').forEach(s=>s.classList.toggle('hidden',s.id!==`page-${page}`));document.querySelectorAll('.nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));if(page==='transactions')render();}
+document.querySelectorAll('.nav button[data-page]').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+document.querySelectorAll('[data-goto]').forEach(b=>b.onclick=()=>showPage(b.dataset.goto));
+$('quickIncome').onclick=()=>{showPage('transactions');$('type').value='in';$('category').value='Sales';$('amount').focus();};
+$('quickExpense').onclick=()=>{showPage('transactions');$('type').value='out';$('category').value='Stock / supplies';$('amount').focus();};
+render();calculatePlanner();
+</script>
+</body>
+</html>
